@@ -1,0 +1,11 @@
+meta:
+  title: "Techsetters"
+  description: "spotting the latest trends // starring creators, leaders, investors"
+  facebook_image: "/img/logo-wide.jpg"
+  twitter_image: "/img/logo-wide.jpg"
+  image: "/img/logo-wide.jpg"
+  twitter_handle: "@techsetters_io"
+  domain: "techsetters.io"
+  url: "http://techsetters.io"
+  google_analytics_id: "" # UA-66637918-1
+  theme_color: "#FFFFFF"
