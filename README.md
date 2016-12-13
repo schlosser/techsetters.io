@@ -1,6 +1,32 @@
 [techsetters.io](http://techsetters.io)
 ========================================
 
+## Setup
+
+Install [npm][npm-install]. Then, install gulp:
+
+```bash
+npm install -g gulp  # May require `sudo`
+npm install -g firebase-tools
+```
+
+## Developing
+
+```bash
+npm install            # One time
+gem install scss_lint  # One time
+gulp serve
+```
+
+## Deploying
+
+We deploy using [Firebase][firebase]. Contact Sam for access to the Firebase project.
+
+```bash
+firebase login         # One time
+firebase deploy        
+```
+
 ## Features
 
 - Install the project in just three commands (see "Developing" below).
@@ -14,22 +40,6 @@
 All with one command from the terminal:
 
 ```bash
-gulp serve
-```
-
-## Setup
-
-Install [npm][npm-install]. Then, install gulp:
-
-```bash
-npm install -g gulp  # May require `sudo`
-```
-
-## Developing
-
-```bash
-npm install            # One time
-gem install scss_lint  # One time
 gulp serve
 ```
 
@@ -79,6 +89,7 @@ Runs `gulp watch` in the background, and serves the `dist` directory at `localho
 [autoprefixer]: https://css-tricks.com/autoprefixer/
 [browsersync]: http://www.browsersync.io/
 [cssnano]: http://cssnano.co/
+[firebase]: https://firebase.google.com/
 [gulp]: http://gulpjs.com/
 [handlebars]: http://handlebarsjs.com/
 [htmlmin]: https://github.com/kangax/html-minifier

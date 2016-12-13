@@ -1,0 +1,80 @@
+.modal-overlay {
+  background-color: rgba($black, 0);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: 0s transform, 0.2s ease background-color;
+  width: 100%;
+  z-index: 3;
+}
+
+.modal {
+  height: 100%;
+  position: fixed;
+  transition: 0s;
+  width: 100%;
+  z-index: 3;
+
+  &:not(.active) {
+    transform: translateY(-100%);
+  }
+
+  &.visible {
+    .modal-overlay {
+      background-color: rgba($black, 0.75);
+    }
+
+    .modal-content {
+      opacity: 1;
+    }
+  }
+}
+
+.modal-content {
+  cursor: pointer;
+  display: block;
+  left: 50%;
+  max-width: $content-width;
+  opacity: 0;
+  padding: 0 4rem;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0s transform, 0.2s ease opacity;
+  width: 100%;
+  z-index: 4;
+
+  .video-wrapper {
+    background-color: $black;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+  }
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.close-modal {
+  cursor: pointer;
+  height: 3rem;
+  left: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  transition: 0.3s ease opacity;
+  width: 3rem;
+  z-index: 5;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

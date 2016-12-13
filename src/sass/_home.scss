@@ -1,0 +1,154 @@
+header {
+  background-color: $gray;
+  color: $white;
+}
+
+.buttons {
+  margin-right: -1rem;
+  display: flex;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    color: $white;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    width: 45%;
+    border-radius: 2px;
+    transition: 0.2s linear background-color;
+
+    a {
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      display: flex;
+      padding: 0.5rem 0.75rem;
+    }
+
+    i, span {
+      line-height: 1;
+      vertical-align: top;
+    }
+
+    i {
+      margin-right: 0.25rem;
+      font-size: 1rem
+    }
+
+    span {
+      font-size: 0.75rem;
+    }
+
+    &.instagram {
+      background-color: $instagram-blue;
+      border-bottom: 2px solid darken($instagram-blue, 10%);
+
+      &:hover {
+        background-color: darken($instagram-blue, 5%);
+      }
+    }
+
+    &.facebook {
+      background-color: $facebook-blue;
+      border-bottom: 2px solid darken($facebook-blue, 10%);
+
+      &:hover {
+        background-color: darken($facebook-blue, 5%);
+      }
+    }
+
+    &.twitter {
+      background-color: $twitter-blue;
+      border-bottom: 2px solid darken($twitter-blue, 10%);
+
+      &:hover {
+        background-color: darken($twitter-blue, 5%);
+      }
+    }
+
+    &.youtube {
+      background-color: $youtube-red;
+      border-bottom: 2px solid darken($youtube-red, 10%);
+
+      &:hover {
+        background-color: darken($youtube-red, 5%);
+      }
+    }
+  }
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -2rem;
+  margin-bottom: -4rem;
+
+  .video {
+    padding: 0 2rem 4rem;
+    width: 50%;
+  }
+}
+
+.video.horizontal {
+  display: flex;
+  margin: 0 -2rem;
+
+  .video-preview, .text {
+    padding: 0 2rem;
+    width: 50%;
+  }
+}
+
+.video-preview {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  position: relative;
+
+  img {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px $shadow-light, 0 1px 2px $shadow-dark;
+    width: 100%;
+  }
+
+  svg {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: 0.3s ease transform;
+  }
+
+  &:hover svg {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: $phone-landscape-max) {
+  .videos .video {
+    width: 100%;
+  }
+
+  .video.horizontal {
+    flex-direction: column;
+
+    .video-preview, .text {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    li {
+      width: 100%;
+      margin-right: 0;
+
+      span {
+        font-size: 0.85rem;
+      }
+
+      i {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}

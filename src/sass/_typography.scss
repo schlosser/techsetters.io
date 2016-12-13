@@ -8,19 +8,15 @@ $light: 300;
 $sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 h1, %h1 {
-  font-size: 2.25rem;
-  font-weight: $light;
-  letter-spacing: 0.5px;
-  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  font-weight: $bold;
+  margin-bottom: 0.5rem;
 }
 
 h2, %h2 {
-  font-size: 1rem;
-  font-weight: $medium;
-  letter-spacing: 4px;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: $bold;
+  margin-bottom: 1rem;
 }
 
 h3, %h3 {
