@@ -5,12 +5,11 @@ $medium: 500;
 $regular: 400;
 $light: 300;
 
-$sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sans: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 h1, %h1 {
   font-size: 2rem;
   font-weight: $bold;
-  margin-bottom: 0.5rem;
 }
 
 h2, %h2 {

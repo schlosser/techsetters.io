@@ -6,34 +6,34 @@
         <div class="video horizontal">
             <div class="play-video video-preview" data-video-id="-_bSE5vY5lY">
                 <img src="/img/logo-wide.jpg" alt="">
-                {{> "icon/play-triangle.svg" }}
+                <div class="play-icon">{{> "icon/play-triangle.svg" }}</div>
             </div>
             <div class="text">
-                <h1>Techsetters</h1>
+                <h1>We are Techsetters</h1>
                 <p>We want to inspire the next generation of tech inventors, students, and consumers through informative content featuring the stories of leaders in the industry.</p>
                 <ul class="buttons">
                     <li class="instagram">
                         <a href="https://www.instagram.com/techsetters_io/?ref=badge">
                             <i class="icon-instagram"></i>
-                            <span>Follow @techsetters_io</span>
+                            <span>Find us on Instagram</span>
                         </a>
                     </li>
                     <li class="twitter">
                         <a href="https://twitter.com/techsetters_io" data-size="large" data-show-count="false">
                             <i class="icon-twitter"></i>
-                            <span>Follow @techsetters_io</span>
+                            <span>Follow us on Twitter</span>
                         </a>
                     </li>
                     <li class="facebook">
                         <a href="https://www.facebook.com/techsetters_io" data-size="large" data-show-count="false">
                             <i class="icon-facebook"></i>
-                            <span>Like Techsetters</span>
+                            <span>Like us on Facebook</span>
                         </a>
                     </li>
                     <li class="youtube">
                         <a href="https://www.youtube.com/channel/UCIccDfZ5krxWdLinVd0Bh3A" data-size="large" data-show-count="false">
                             <i class="icon-youtube-play"></i>
-                            <span>Subscribe</span>
+                            <span>Subscribe on Youtube</span>
                         </a>
                     </li>
                 </ul>
@@ -45,10 +45,16 @@
     <ol class="videos">
         {{#each videos }}
         <li class="video">
+            {{#if this.img }}
             <div class="play-video video-preview" data-video-id="{{ this.id }}">
                 <img src="{{ this.img }}" alt="">
-                {{> "icon/play-triangle.svg" }}
+                <div class="play-icon">{{> "icon/play-triangle.svg" }}</div>
             </div>
+            {{ else }}
+            <div class="video-preview video-placeholder">
+                <div class="play-icon">{{> "icon/play-triangle.svg" }}</div>
+            </div>
+            {{/if}}
             <div class="text">
                 <h2>{{ this.title }}</h2>
                 <p>{{ this.description }}</p>
@@ -57,6 +63,36 @@
         {{/ each}}
     </ol>
 </div>
+<footer>
+    <div class="content">
+        <ul class="buttons">
+            <li class="instagram">
+                <a href="https://www.instagram.com/techsetters_io/?ref=badge">
+                    <i class="icon-instagram"></i>
+                    <span>Find us on Instagram</span>
+                </a>
+            </li>
+            <li class="twitter">
+                <a href="https://twitter.com/techsetters_io" data-size="large" data-show-count="false">
+                    <i class="icon-twitter"></i>
+                    <span>Follow us on Twitter</span>
+                </a>
+            </li>
+            <li class="facebook">
+                <a href="https://www.facebook.com/techsetters_io" data-size="large" data-show-count="false">
+                    <i class="icon-facebook"></i>
+                    <span>Like us on Facebook</span>
+                </a>
+            </li>
+            <li class="youtube">
+                <a href="https://www.youtube.com/channel/UCIccDfZ5krxWdLinVd0Bh3A" data-size="large" data-show-count="false">
+                    <i class="icon-youtube-play"></i>
+                    <span>Subscribe on Youtube</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
 <script src="https://www.youtube.com/player_api"></script>
 <script src="/js/main.js"></script>
 {{/content}}
