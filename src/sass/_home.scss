@@ -1,110 +1,28 @@
 header {
-  background-color: $yellow;
-  color: $black;
+  position: relative;
+  height: 35rem;
 
-  p {
-    margin: 0.5rem 0;
-  }
-}
+  .hero-content {
+    animation: $a-fade-in-up;
+    text-align: center;
+    max-width: $content-width / 2;
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: -1rem;
-  padding: 1rem 0;
-
-  li {
-    background-color: $white;
-    border-radius: 2px;
-    color: $white;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    transition: 0.3s ease all;
-    width: 45%;
-
-    &:hover {
-      background-color: $very-light-gray;
-    }
-
-    a {
-      align-items: center;
-      display: flex;
-      height: 100%;
-      padding: 0.5rem 0.75rem;
-      width: 100%;
-    }
-
-    i, span {
-      line-height: 1;
-      vertical-align: top;
-    }
-
-    i {
-      font-size: 1rem;
-      margin-right: 0.25rem;
-    }
-
-    span {
-      font-size: 0.75rem;
-    }
-
-    &.instagram {
-      background-color: $instagram-blue;
-      border-bottom: 2px solid darken($instagram-blue, 10%);
-
-      &:hover {
-        background-color: darken($instagram-blue, 5%);
-      }
-    }
-
-    &.facebook {
-      background-color: $facebook-blue;
-      border-bottom: 2px solid darken($facebook-blue, 10%);
-
-      &:hover {
-        background-color: darken($facebook-blue, 5%);
-      }
-    }
-
-    &.twitter {
-      background-color: $twitter-blue;
-      border-bottom: 2px solid darken($twitter-blue, 10%);
-
-      &:hover {
-        background-color: darken($twitter-blue, 5%);
-      }
-    }
-
-    &.youtube {
-      background-color: $youtube-red;
-      border-bottom: 2px solid darken($youtube-red, 10%);
-
-      &:hover {
-        background-color: darken($youtube-red, 5%);
-      }
+    p {
+      margin: 0.5rem 0 2rem;
+      font-size: 1.5rem;
     }
   }
 }
 
-.videos {
+.video-set {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -2rem;
   margin-bottom: -4rem;
+  animation: $a-fade-in-up-delay;
 
-  .video {
+  .video-wrapper {
     padding: 0 2rem 4rem;
-    width: 50%;
-  }
-}
-
-.video.horizontal {
-  display: flex;
-  margin: 0 -2rem;
-
-  .video-preview, .text {
-    padding: 0 2rem;
     width: 50%;
   }
 }
@@ -132,7 +50,7 @@ header {
     width: 4rem;
 
     &::after {
-      background-color: $yellow;
+      background-color: $dark-gray;
       border-radius: 50%;
       content: ' ';
       display: block;
@@ -155,7 +73,7 @@ header {
       z-index: 2;
 
       g, path {
-        fill: $gray;
+        fill: $white;
       }
     }
   }
@@ -200,6 +118,21 @@ footer {
   }
 }
 
+.play-icon.inline {
+  svg {
+    height: 1rem;
+    margin-right: -0.2rem;
+    transform: scale(0.8);
+    transition: 0.3s ease transform;
+    width: 1rem;
+    z-index: 2;
+
+    g, path {
+      fill: $white;
+    }
+  }
+}
+
 @media screen and (max-width: $phone-landscape-max) {
   .videos .video {
     width: 100%;
@@ -210,23 +143,6 @@ footer {
 
     .video-preview, .text {
       width: 100%;
-    }
-  }
-
-  header .buttons, footer .buttons {
-    width: 100%;
-
-    li {
-      margin-right: 0;
-      width: 100%;
-
-      span {
-        font-size: 0.85rem;
-      }
-
-      i {
-        margin-right: 0.75rem;
-      }
     }
   }
 }

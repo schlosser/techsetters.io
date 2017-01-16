@@ -2,49 +2,64 @@
 {{#content "main" mode="prepend"}}
 {{> modal }}
 <header>
-    <div class="content">
-        <div class="video horizontal">
-            <div class="play-video video-preview" data-video-id="-_bSE5vY5lY">
-                <img src="/img/logo-wide.jpg" alt="">
-                <div class="play-icon">{{> "icon/play-triangle.svg" }}</div>
-            </div>
-            <div class="text">
-                <h1>We are Techsetters</h1>
-                <p>We want to inspire the next generation of tech inventors, students, and consumers through informative content featuring the stories of leaders in the industry.</p>
-                <ul class="buttons">
-                    <li class="instagram">
-                        <a href="https://www.instagram.com/techsetters_io/?ref=badge">
-                            <i class="icon-instagram"></i>
-                            <span>Find us on Instagram</span>
-                        </a>
-                    </li>
-                    <li class="twitter">
-                        <a href="https://twitter.com/techsetters_io" data-size="large" data-show-count="false">
-                            <i class="icon-twitter"></i>
-                            <span>Follow us on Twitter</span>
-                        </a>
-                    </li>
-                    <li class="facebook">
-                        <a href="https://www.facebook.com/techsetters_io" data-size="large" data-show-count="false">
-                            <i class="icon-facebook"></i>
-                            <span>Like us on Facebook</span>
-                        </a>
-                    </li>
-                    <li class="youtube">
-                        <a href="https://www.youtube.com/channel/UCIccDfZ5krxWdLinVd0Bh3A" data-size="large" data-show-count="false">
-                            <i class="icon-youtube-play"></i>
-                            <span>Subscribe on Youtube</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <div class="powders">
+        <div class="powder blue middle-left"><div class="powder-color"></div></div>
+        <div class="powder green middle-right"><div class="powder-color"></div></div>
+        <div class="powder red lower-left"><div class="powder-color"></div></div>
+        <div class="powder yellow lower-right "><div class="powder-color"></div></div>
+        <div class="powder purple upper-center "><div class="powder-color"></div></div>
+
+        {{!-- <div class="powder blue pin-upper-left"><div class="powder-color"></div></div>
+        <div class="powder green pin-upper-center"><div class="powder-color"></div></div>
+        <div class="powder red pin-upper-right"><div class="powder-color"></div></div>
+        <div class="powder yellow pin-lower-right "><div class="powder-color"></div></div>
+        <div class="powder purple pin-lower-left "><div class="powder-color"></div></div> --}}
+    </div>
+    <div class="centered-content">
+        {{!-- <div class="play-video video-preview" data-video-id="-_bSE5vY5lY">
+            <img src="/img/logo-wide.jpg" alt="">
+            <div class="play-icon">{{> "icon/play-triangle.svg" }}</div>
+        </div> --}}
+        <div class="hero-content">
+            <h1>TechSetters</h1>
+            <p>Making super cool videos for your eyes</p>
+            <a href="#intro-video" class="button centered play-video" data-video-id="-_bSE5vY5lY">
+                <i class="play-icon inline">{{> "icon/play-triangle.svg" }}</i>
+                <span>Meet the Team</span>
+            </a>
+            {{!-- <ul class="button-group">
+                <li class="button instagram">
+                    <a href="https://www.instagram.com/techsetters_io/?ref=badge">
+                        <i class="icon-instagram"></i>
+                        <span>Find us on Instagram</span>
+                    </a>
+                </li>
+                <li class="button twitter">
+                    <a href="https://twitter.com/techsetters_io" data-size="large" data-show-count="false">
+                        <i class="icon-twitter"></i>
+                        <span>Follow us on Twitter</span>
+                    </a>
+                </li>
+                <li class="button facebook">
+                    <a href="https://www.facebook.com/techsetters_io" data-size="large" data-show-count="false">
+                        <i class="icon-facebook"></i>
+                        <span>Like us on Facebook</span>
+                    </a>
+                </li>
+                <li class="button youtube">
+                    <a href="https://www.youtube.com/channel/UCIccDfZ5krxWdLinVd0Bh3A" data-size="large" data-show-count="false">
+                        <i class="icon-youtube-play"></i>
+                        <span>Subscribe on Youtube</span>
+                    </a>
+                </li>
+            </ul> --}}
         </div>
     </div>
 </header>
 <div class="content">
-    <ol class="videos">
+    <ol class="video-set">
         {{#each videos }}
-        <li class="video">
+        <li class="video-wrapper">
             {{#if this.img }}
             <div class="play-video video-preview" data-video-id="{{ this.id }}">
                 <img src="{{ this.img }}" alt="">
@@ -65,31 +80,23 @@
 </div>
 <footer>
     <div class="content">
-        <ul class="buttons">
-            <li class="instagram">
-                <a href="https://www.instagram.com/techsetters_io/?ref=badge">
-                    <i class="icon-instagram"></i>
-                    <span>Find us on Instagram</span>
-                </a>
-            </li>
-            <li class="twitter">
-                <a href="https://twitter.com/techsetters_io" data-size="large" data-show-count="false">
-                    <i class="icon-twitter"></i>
-                    <span>Follow us on Twitter</span>
-                </a>
-            </li>
-            <li class="facebook">
-                <a href="https://www.facebook.com/techsetters_io" data-size="large" data-show-count="false">
-                    <i class="icon-facebook"></i>
-                    <span>Like us on Facebook</span>
-                </a>
-            </li>
-            <li class="youtube">
-                <a href="https://www.youtube.com/channel/UCIccDfZ5krxWdLinVd0Bh3A" data-size="large" data-show-count="false">
-                    <i class="icon-youtube-play"></i>
-                    <span>Subscribe on Youtube</span>
-                </a>
-            </li>
+        <div class="button-group">
+            <a  class="button instagram" href="https://www.instagram.com/techsetters_io/?ref=badge">
+                <i class="icon-instagram"></i>
+                <span>Find us on Instagram</span>
+            </a>
+            <a  class="button twitter" href="https://twitter.com/techsetters_io" data-size="large" data-show-count="false">
+                <i class="icon-twitter"></i>
+                <span>Follow us on Twitter</span>
+            </a>
+            <a  class="button facebook" href="https://www.facebook.com/techsetters_io" data-size="large" data-show-count="false">
+                <i class="icon-facebook"></i>
+                <span>Like us on Facebook</span>
+            </a>
+            <a  class="button youtube" href="https://www.youtube.com/channel/UCIccDfZ5krxWdLinVd0Bh3A" data-size="large" data-show-count="false">
+                <i class="icon-youtube-play"></i>
+                <span>Subscribe on Youtube</span>
+            </a>
         </ul>
     </div>
 </footer>
